@@ -1,8 +1,9 @@
-public class Node extends Ball
+public class Node// extends Ball
 {
-    public Node(double x,double y,double diameter,String colour)
+    public Node(double x,double y,double diameter,String colour, GameArena a )
     {
-        super(x,y,diameter,colour);
+        Ball b = new Ball(x,y,diameter,colour);
+        a.addBall(b);
     }   
 
    
