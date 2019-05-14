@@ -1,10 +1,30 @@
-public class Node// extends Ball
+public class Node
+
+
 {
-    public Node(double x,double y,double diameter,String colour, GameArena a )
+    private Ball b;
+
+    public Node(double x,double y,String colour)
     {
-        Ball b = new Ball(x,y,diameter,colour);
-        a.addBall(b);
+        //super(x,y,diameter,colour);
+        b = new Ball(x,y,20,colour);
+        //a.addBall(b);
     }   
+
+    public Ball getNode()
+    {
+        return b; 
+    }
+
+ //   public int getX()
+   // {
+    //    return b.getX(); 
+    //}
+
+    //public int getY()
+    //{
+      //  return b.getY();
+    //}
 
    
 }
