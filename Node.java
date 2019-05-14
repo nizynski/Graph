@@ -4,7 +4,7 @@ public class Node
 {
     private Ball b;
 
-    public Node(double x,double y,String colour)
+    public Node(double x,double y,String colour, GameArena arena)
     {
         //super(x,y,diameter,colour);
         b = new Ball(x,y,20,colour);
