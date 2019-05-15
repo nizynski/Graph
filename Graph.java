@@ -7,40 +7,32 @@
 
 public class Graph
 {
- GameArena arena = new GameArena(500,500);
-     Line line[] = new Line[4]; 
+    GameArena arena = new GameArena(500,500);
+    UndirectedLine undirectedLines[] = new UndirectedLine[4]; 
     Node nodeArray[] = new Node[4];
 
 
 
 public Graph(){
-    for(int i = 0;i< 4;i++)
-    {
-        if (i==0){
-            nodeArray[i]= new Node(150.0,250.0,"BLUE",arena );
-            line[i]= new Line(150,250,150,150,2,"WHITE");
-        }
-        else if(i==1){
-            nodeArray[i] = new Node(250.0,150.0,"GREEN",arena);
-            line[i]= new Line(250,150,250,250,2,"WHITE");
-        }
-        else if(i==2){
-            nodeArray[i] = new Node(250.0,250.0,"RED",arena);
-            line[i]= new Line(250,250,150,250,2,"WHITE");
-        }
-        else{
-            nodeArray[i]= new Node(150.0,150.0,"YELLOW",arena);
-            line[i] = new Line(150,150,250,150,2,"WHITE");
-        }
-    }
+
+            nodeArray[0]= new Node(150.0,250.0,"BLUE",arena );
+            nodeArray[1] = new Node(250.0,150.0,"GREEN",arena);
+            nodeArray[2] = new Node(250.0,250.0,"RED",arena);
+            nodeArray[3]= new Node(150.0,150.0,"YELLOW",arena);
+        undirectedLines[0]= new UndirectedLine(nodeArray[0],nodeArray[2],arena);
+        undirectedLines[0]= new UndirectedLine(nodeArray[1],nodeArray[2],arena);
+        undirectedLines[0]= new UndirectedLine(nodeArray[3],nodeArray[1],arena);
+        undirectedLines[0]= new UndirectedLine(nodeArray[0],nodeArray[3],arena);
+
+
+
+      
+        
+     for(int i = 0 ; i < 4 ; i++){
+         nodeArray[i].drawNode();
+     }
        
-        for( int i=0;i<4;i++)
-        {
-            arena.addBall(nodeArray[i].getNode());
-            arena.addLine(line[i]);
-            
-           
-        }
+      
 
         
 
@@ -48,11 +40,3 @@ public Graph(){
         
     }
 }
-
-
-
-
-
-
-
-
