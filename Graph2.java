@@ -1,20 +1,26 @@
 //File:Graph2.java
 
-/*
+/** 
+* This class calls nodes and lines to make graph 2
 *
 * @author katie nizynski
 */
 public class Graph2
 {
-    GameArena arena = new GameArena(500,500);
+    GameArena arena = new GameArena(500,500);// creates a game arean 500 by 500 
     UndirectedLine undirectedLines[] = new UndirectedLine[10]; 
     Node nodeArray[] = new Node[5];
 
 
-
+/**Graph2 Method.
+     * 
+     * This method is used to call all the nodes and lines to be created to make the graph
+     * @param 
+     * @return 
+     */
 public Graph2()
     {
-
+        /** fills the array with nodes and properties */
         nodeArray[0]= new Node("a",170.0,300.0,"BLUE",arena );
         nodeArray[1] = new Node("b",300.0,150.0,"GREEN",arena);
         nodeArray[2] = new Node("c",290.0,300.0,"RED",arena);
@@ -34,8 +40,8 @@ public Graph2()
    
          for(int i = 0 ; i < 5; i++)
          {
-         nodeArray[i].drawNode();
-         undirectedLines[i].displayUndirected();
+         nodeArray[i].drawNode();// adds the nodes 
+         undirectedLines[i].displayUndirected();// displays connections 
          }
        
          arena.update();
