@@ -1,6 +1,7 @@
 //File:Driver.java
 
-/*
+/** 
+* this is used to show all the graphs by having a constuctor for each graph 
 *
 * @author katie nizynski
 */
