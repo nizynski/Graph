@@ -9,6 +9,7 @@
 
 public class UndirectedLine
 {
+/** instance varaibles */
    private Line a;
    private Node start;
    private Node end;
