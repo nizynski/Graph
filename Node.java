@@ -1,19 +1,34 @@
+//File:Node.java
+
+/*
+*
+* @author katie nizynski
+*/
 public class Node
 
 {
     private Ball b;
     private GameArena a;
+    private String Name;
 
-    public Node(double x,double y,String colour, GameArena arena)
+    public Node(String name ,double x,double y,String colour, GameArena arena)
     {
+        Name = name;
         a = arena;
         b = new Ball(x,y,20,colour);
-        //arena.addBall(b);
+        
     }   
+
+    public String getName()
+    {
+
+        return Name; 
+    }
 
     public void drawNode()
     {
         a.addBall(b);
+       // arena.update()
     }
 
     public Ball getNode()
